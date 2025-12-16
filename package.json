@@ -1,0 +1,12 @@
+{
+  "name": "aurowear",
+  "private": true,
+  "workspaces": ["front", "back"],
+  "scripts": {
+    "dev": "npm run dev -w back & npm run dev -w front",
+    "dev:back": "npm run dev -w back",
+    "dev:front": "npm run dev -w front",
+    "build": "npm run build -w back && npm run build -w front",
+    "lint": "npm run lint -w back && npm run lint -w front"
+  }
+}
