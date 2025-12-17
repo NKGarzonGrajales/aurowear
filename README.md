@@ -5,11 +5,17 @@ Aurowear es un **e-commerce full-stack** desarrollado con un enfoque profesional
 La arquitectura está pensada para escalar y cubrir las necesidades reales de una plataforma de comercio electrónico: catálogo, carrito, checkout, autenticación, roles y pagos.
 
 ---
+## Development
 
+### Requirements
+- Node.js 18+
+- npm 9+
+
+---
 ## 🧱 Arquitectura (Monorepo)
 
 aurowear/
-├── front/ # Next.js (React + Tailwind CSS)
+├── front/ # Next.js (Typescript + React + Tailwind CSS)
 ├── back/ # NestJS API
 └── README.md
 
@@ -48,7 +54,26 @@ El proyecto tiene como objetivo implementar un e-commerce completo con:
 
 ---
 
-## ▶️ Ejecutar en Local
+### Ejecucion del proyecto desde la raíz (from root)
+
+```bash
+npm install
+npm run dev
+
+## Ports
+
+Front: http://localhost:3000
+
+Back: http://localhost:3001
+
+Health check
+GET http://localhost:3001/health
+
+> Objetivo: que cualquier persona (o yo en 3 meses) pueda levantar el proyecto **sin preguntar nada**.
+
+
+--- 
+## ▶️ Ejecutar en Local 
 
 ### Frontend
 
@@ -57,21 +82,18 @@ cd front
 npm install
 npm run dev
 
-
 La aplicación estará disponible en:
 
 http://localhost:3000
 
 ---
 
+### Backend
 
-Backend
-
+```bash
 cd back
 npm install
 npm run start:dev
-
----
 
 La API se ejecuta por defecto en:
 
@@ -117,3 +139,4 @@ Aurowear se construye siguiendo buenas prácticas de desarrollo full-stack, con 
 
 
 ---
+
