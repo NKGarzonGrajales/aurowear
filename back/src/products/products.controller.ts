@@ -1,5 +1,5 @@
-import { Controller, Get } from '@nestjs/common';
-import { Product } from './product.type';
+import { Controller, Get, NotFoundException, Param } from '@nestjs/common';
+import type { Product } from './product.type';
 
 @Controller('products')
 export class ProductController {
@@ -30,5 +30,17 @@ export class ProductController {
   @Get()
   findAll(): Product[] {
     return this.products;
+  }
+  @Get(':id')
+  findOne(@Param('id') id: string): Product {
+    const productId = Number(id);
+
+    const product = this.products.find((p) => p.id === productId);
+
+    if (!product) {
+      throw new NotFoundException(`Product with id ${productId} not found`);
+    }
+
+    return product;
   }
 }
