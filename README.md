@@ -72,6 +72,42 @@ GET http://localhost:3001/health
 > Objetivo: que cualquier persona (o yo en 3 meses) pueda levantar el proyecto **sin preguntar nada**.
 
 
+---
+
+## 🔌 API Endpoints (Sprint 2)
+
+### Health
+- **GET** `/health`
+- URL: http://localhost:3001/health
+- Descripción: Verifica que el backend esté activo.
+
+### Products (mock data)
+- **GET** `/products`
+  - URL: http://localhost:3001/products
+  - Descripción: Obtiene la lista de productos (datos mock).
+
+- **GET** `/products/:id`
+  - Ejemplo: http://localhost:3001/products/1
+  - Descripción: Obtiene el detalle de un producto por id.
+  - Respuesta 404 si el producto no existe.
+
+---
+
+## 🌐 Rutas del Frontend (Sprint 2)
+
+- `/status`
+  - URL: http://localhost:3000/status
+  - Descripción: Página de verificación del estado del backend.
+
+- `/products`
+  - URL: http://localhost:3000/products
+  - Descripción: Lista de productos consumiendo el backend.
+
+- `/products/[id]`
+  - Ejemplo: http://localhost:3000/products/1
+  - Descripción: Detalle de producto individual.
+
+
 --- 
 ## ▶️ Ejecutar en Local 
 
