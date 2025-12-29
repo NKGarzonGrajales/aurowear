@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const dynamic = 'force-dynamic';
 
 type Product = {
@@ -39,7 +41,13 @@ export default async function ProductsPage() {
               borderRadius: 8,
             }}
           >
-            <h2 style={{ fontWeight: 600 }}>{product.name}</h2>
+            
+            <h2 style={{ fontWeight: 600 }}>
+              <Link href={`/products/${product.id}`} style={{ textDecoration: 'underline' }}>
+                {product.name}
+              </Link>
+            </h2>
+
             <p>{product.description}</p>
             <p>
               <strong>Price:</strong> ${product.price}
